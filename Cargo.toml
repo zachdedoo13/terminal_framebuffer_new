@@ -1,0 +1,18 @@
+[package]
+name = "terminal_renders"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+threadpool = "1.8.1"
+num_cpus = "1.16.0"
+
+
+rayon = { version = "1.10.0", features = [] }
+
+
+crossterm = "0.29.0"
+
+anyhow = { version = "1.0.98" }
+
+ctrlc = "3.4.6"
