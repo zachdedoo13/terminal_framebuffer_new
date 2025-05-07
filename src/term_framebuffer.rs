@@ -29,7 +29,7 @@ impl<D: Render + Default + Copy + 'static> TerminalFramebuffer<D> {
 
     pub fn render_wrapping(&self) -> Result<()> {
         let mut s = stdout();
-        queue!(s, MoveTo(0, 0))?;
+        queue!(s, MoveTo(0, 0), EnableLineWrap)?;
 
         let mut carry = D::CarryOver::default();
         for v in self.data.iter() {
